@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	CorsConfigurationSource corsConfigurationSource() {
 	    CorsConfiguration configuration = new CorsConfiguration();
-	    List<String> allowOrigins = Arrays.asList("http://localhost:4200");
+	    List<String> allowOrigins = Arrays.asList("http://localhost:4200","https://angular-dot-isentropic-road-316012.el.r.appspot.com");
 	    configuration.setAllowedOrigins(allowOrigins);
 	    configuration.setAllowedMethods(Collections.singletonList("*"));
 	    configuration.setAllowedHeaders(Collections.singletonList("*"));
