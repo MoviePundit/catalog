@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	CorsConfigurationSource corsConfigurationSource() {
 	    CorsConfiguration configuration = new CorsConfiguration();
-	    List<String> allowOrigins = Arrays.asList("http://localhost:4200","https://angular-dot-isentropic-road-316012.el.r.appspot.com");
+	    List<String> allowOrigins = Arrays.asList("https://angular-dot-isentropic-road-316012.el.r.appspot.com/login","http://localhost:4200","https://angular-dot-isentropic-road-316012.el.r.appspot.com","https://angular-dot-isentropic-road-316012.el.r.appspot.com/products");
 	    configuration.setAllowedOrigins(allowOrigins);
 	    configuration.setAllowedMethods(Collections.singletonList("*"));
 	    configuration.setAllowedHeaders(Collections.singletonList("*"));
@@ -75,6 +75,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			.and()
 				// dont authenticate this particular request
 				.authorizeRequests().antMatchers("/authenticate").permitAll()
+				.and()
 				// all other requests need to be authenticated
 				.anyRequest().authenticated().and()
 				// make sure we use stateless session; session won't be used to
