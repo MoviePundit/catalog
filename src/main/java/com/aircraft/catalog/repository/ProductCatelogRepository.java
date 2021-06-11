@@ -11,5 +11,5 @@ import com.aircraft.catalog.model.ProductCatelog;
 @Repository
 public interface ProductCatelogRepository extends JpaRepository<ProductCatelog, Long>{
 
-	 Optional<List<ProductCatelog>> findAllProductCatelogByProductCategory(String category);
+	 Optional<List<ProductCatelog>> findAllProductCatelogByProductCategoryContainingIgnoreCase(String category);
 }

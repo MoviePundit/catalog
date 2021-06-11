@@ -60,7 +60,7 @@ public class ProductCatelogServiceTest {
 	@Test
 	public void testIfAbleToRetrieveProductsByCategory() {
 		
-		when(repository.findAllProductCatelogByProductCategory("Consumer")).thenReturn(Optional.of(mockData));
+		when(repository.findAllProductCatelogByProductCategoryContainingIgnoreCase("Consumer")).thenReturn(Optional.of(mockData));
 		
 		List<ProductCatelog> products = service.retrieveAllProductsByCategory("Consumer");
 		

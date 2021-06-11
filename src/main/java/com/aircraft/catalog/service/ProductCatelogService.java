@@ -42,7 +42,7 @@ public class ProductCatelogService {
 	public List<ProductCatelog> retrieveAllProductsByCategory(String category) {
 
 		Optional<List<ProductCatelog>> productCatelogListByCategory = productCatelogRepository
-				.findAllProductCatelogByProductCategory(category);
+				.findAllProductCatelogByProductCategoryContainingIgnoreCase(category);
 
 		if (Objects.isNull(productCatelogListByCategory) || productCatelogListByCategory.isEmpty()
 				|| productCatelogListByCategory.get().isEmpty()) {
