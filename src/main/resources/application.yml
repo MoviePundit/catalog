@@ -1,0 +1,21 @@
+# Spring related properties
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:aircraft
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+# Cors related custom properties
+cors-ignore:
+  domains: https://angular-dot-isentropic-road-316012.el.r.appspot.com/login,
+           http://localhost:4200,
+           https://angular-dot-isentropic-road-316012.el.r.appspot.com,
+           https://angular-dot-isentropic-road-316012.el.r.appspot.com/products
+
+# access token related custom properties
+jwt:
+  password: $2b$10$bQ40.K/KUgXpa7ski.39TuAQr/gZqyn.ZA1a/.aP3L3.bbLIbVOmq
+  secret: clientsecret
+  username: username

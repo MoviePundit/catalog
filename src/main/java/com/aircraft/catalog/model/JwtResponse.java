@@ -1,6 +1,6 @@
 package com.aircraft.catalog.model;
-import java.io.Serializable;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class JwtResponse implements Serializable {
-
-	private static final long serialVersionUID = -8091879091924046844L;
-	private final String jwttoken;
+  private static final long serialVersionUID = -8091879091924046844L;
+  private final String jwttoken;
 }

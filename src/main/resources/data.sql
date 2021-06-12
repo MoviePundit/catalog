@@ -1,5 +1,5 @@
 CREATE TABLE `product_catelog` (
-  `product_id` bigint NOT NULL,
+  `product_id` bigint NOT NULL AUTO_INCREMENT,
   `product_category` varchar(255) DEFAULT NULL,
   `product_description` varchar(255) DEFAULT NULL,
   `product_name` varchar(255) DEFAULT NULL,
